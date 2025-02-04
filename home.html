@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: pink;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 2em;
+            color: red;
+        }
+        .container {
+            position: relative;
+            margin-top: 50px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 20px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        #yes {
+            background-color: green;
+            color: white;
+        }
+        #no {
+            background-color: red;
+            color: white;
+            position: absolute;
+        }
+    </style>
+    <script>
+        function moveNoButton() {
+            let noButton = document.getElementById("no");
+            let x = Math.random() * window.innerWidth * 0.6;
+            let y = Math.random() * window.innerHeight * 0.6;
+            noButton.style.left = x + "px";
+            noButton.style.top = y + "px";
+        }
+
+        function showYesMessage() {
+            document.body.innerHTML = "<h1> I knew that you would say yes! ❤️. See you in 10 days 😘</h1>";
+        }
+    </script>
+</head>
+<body>
+    <h1>Hanan & Asmaa , Will You Be My Valentine? 💖</h1>
+    <div class="container">
+        <button id="yes" onclick="showYesMessage()">Yes</button>
+        <button id="no" onmouseover="moveNoButton()">No</button>
+    </div>
+</body>
+</html>
